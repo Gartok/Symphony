@@ -1,0 +1,3 @@
+nicolas_nicolas_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: NicolasNicolasBundle:Default:index }

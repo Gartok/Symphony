@@ -1,0 +1,30 @@
+ens_job:
+    path:     /
+    defaults: { _controller: "GartTestBundle:User:index" }
+
+ens_job_show:
+    path:     /{id}/show
+    defaults: { _controller: "GartTestBundle:User:show" }
+
+ens_job_new:
+    path:     /new
+    defaults: { _controller: "GartTestBundle:User:new" }
+
+ens_job_create:
+    path:     /create
+    defaults: { _controller: "GartTestBundle:User:create" }
+    methods:  POST
+
+ens_job_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GartTestBundle:User:edit" }
+
+ens_job_update:
+    path:     /{id}/update
+    defaults: { _controller: "GartTestBundle:User:update" }
+    methods:  [POST, PUT]
+
+ens_job_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GartTestBundle:User:delete" }
+    methods:  [POST, DELETE]

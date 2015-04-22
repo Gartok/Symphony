@@ -1,0 +1,22 @@
+{% extends 'GartTestBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('bundles/garttest/css/user.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+    <div id="users">
+        <table class="users">
+            {% for entity in entities %}
+                <tr class="{{ cycle(['even', 'odd'], loop.index) }}">
+                    <td class="firstname">
+                        <a href="{{ path('ens_job_show', { 'id': entity.id }) }}">
+                            {{entity.firstname}}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'GartTestBundle::layout.html.twig' %}
+ 
+{% block title %}
+    {{ entity.lastname }} is looking for a {{ entity.firstname }}
+{% endblock %}
+ 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/garttest/css/user.css') }}" type="text/css" media="all" />
+{% endblock %}
+ 
+{% block content %}
+    <div id="user">
+      <h1>{{ entity.lastname }}</h1>
+      <h2>{{ entity.firstname }}</h2>
+      <h3>
+        {{ entity.lastname }}
+        <small> - {{ entity.country }}</small>
+      </h3>
+ 
+      <div class="city">
+        {{ entity.city }}
+      </div>
+ 
+      <h4>How to apply?</h4>
+ 
+      <div style="padding: 20px 0">
+        <a href="{{ path('ens_job_edit', { 'id': entity.id }) }}">
+          Edit
+        </a>
+      </div>
+    </div>
+{% endblock %}

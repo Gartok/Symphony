@@ -1,0 +1,4 @@
+services:
+#    nicolas_nicolas.example:
+#        class: Nicolas\NicolasBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

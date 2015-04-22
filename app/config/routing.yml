@@ -1,0 +1,31 @@
+nicolas_nicolas:
+    resource: "@NicolasNicolasBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gart_test:
+    resource: "@GartTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ens_jobeet:
+    resource: "@EnsJobeetBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+EnsJobeetBundle_job:
+    resource: "@EnsJobeetBundle/Resources/config/routing/job.yml"
+    prefix: /job
+ 
+EnsJobeetBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: EnsJobeetBundle:Default:index }
+    
+GartTestBundle_user:
+    resource: "@GartTestBundle/Resources/config/routing/user.yml"
+    prefix: /user
+
+GartTestBundle_homepage:
+    pattern: /hello/{name}
+    defaults: { _controller: GartTestBundle:Default:index }

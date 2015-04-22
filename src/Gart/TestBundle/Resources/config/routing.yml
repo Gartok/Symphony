@@ -1,0 +1,7 @@
+gart_test_ens_job:
+    resource: "@GartTestBundle/Resources/config/routing/user.yml"
+    prefix:   /ens_job
+
+gart_test_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GartTestBundle:Default:index }
